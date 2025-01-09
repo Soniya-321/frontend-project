@@ -10,20 +10,20 @@ const LandingPage = () => {
     const fetchUser = async () => {
       try {
         const token = getAuthToken();
-        const response = await fetch('https://backend-app-c5d0.onrender.com/api/user-info', {
+        const response = await fetch('https://backend-app-c5d0.onrender.com/api/verify', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
-        const data = await response.json();
 
         if (response.ok) {
-          setUser(data);
+          const data = await response.json();
+          setUser(data); // Set user details from API response
         } else {
           navigate('/login'); // Redirect to login if unauthorized
         }
       } catch {
-        navigate('/login');
+        navigate('/login'); // Redirect to login on error
       }
     };
     fetchUser();
@@ -43,10 +43,10 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
+      <button className='register-btn logout-btn' onClick={handleLogout}>Logout</button>
       <h1>
-        {getGreeting()} {user.firstName} {user.lastName}
+        {getGreeting()} <span> {user.firstName} {user.lastName} </span>
       </h1>
-      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 };
