@@ -10,7 +10,7 @@ const LandingPage = () => {
     const fetchUser = async () => {
       try {
         const token = getAuthToken();
-        const response = await fetch('http://localhost:5000/api/user-info', {
+        const response = await fetch('https://backend-app-c5d0.onrender.com/api/user-info', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
