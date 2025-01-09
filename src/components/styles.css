@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 form  {
     display: flex;
@@ -12,4 +13,74 @@ form  {
 }
 input {
     margin: 5px;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+.register-btn {
+    color: #fff;
+    background-color: rgb(27, 40, 218);
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-button {
+    background-color: transparent;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+}
+.icons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.facebook {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    fill: blue;
+}
+.google {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    fill: #f01212;
+}
+.apple {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    fill: #000000;
+}
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+.logout-btn {
+    align-self: flex-end;
+    justify-self: flex-start;
+    margin-right: 30px;
+}
+span {
+    color: #f012cf;
 }
