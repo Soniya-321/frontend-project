@@ -43,7 +43,7 @@ const LoginForm = () => {
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         {/* Form Fields */}
-        <input type="text" name="mobileNumber" placeholder="Mobile Number" required onChange={handleChange} />
+        <input type="text"  name="mobileNumber" placeholder="Mobile Number" required onChange={handleChange} />
         <input type="password" name="password" placeholder="Password" required onChange={handleChange} />
         <button type="submit">Login</button>
       </form>
